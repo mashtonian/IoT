@@ -4,5 +4,5 @@ import tank
 
 if __name__ == '__main__':
     # game.play()
-    converter.convert()
+    # converter.convert()
     tank.monitor()

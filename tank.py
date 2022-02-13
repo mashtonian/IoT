@@ -14,7 +14,7 @@ def check_tank(current_level):
 
 
 def monitor():
-    for x in range(0, 130, 10):
+    for x in range(0, 12):
         depth = float(input("What is the depth? "))
         print(check_tank(depth))
         time.sleep(10)
