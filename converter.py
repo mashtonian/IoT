@@ -1,11 +1,3 @@
-def celsius_to_fahrenheit(celsius):
-    return float(celsius) * 9 / 5 + 32
-
-
-def fahrenheit_to_celsius(fahrenheit):
-    return (float(fahrenheit) - 32) * 5 / 9
-
-
 def pounds_to_kilograms(pound):
     return float(pound) / 2.205
 
@@ -28,7 +20,8 @@ def generic_conversion(form, units, forward_fn, backward_fn):
 
 def convert():
     generic_conversion("temperature", [["Celsius", "c"], ["Fahrenheit", "f"]],
-                       celsius_to_fahrenheit, fahrenheit_to_celsius)
+                       lambda x: float(x) * 9 / 5 + 32,
+                       lambda x: (float(x) - 32) * 5 / 9)
 
     generic_conversion("weight", [["Pounds", "p"], ["Kilograms", "k"]],
                        pounds_to_kilograms, kilograms_to_pounds)
